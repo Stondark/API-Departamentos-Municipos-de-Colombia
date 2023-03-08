@@ -2,7 +2,6 @@
 
 namespace Pipeg\ApiDepartamentosMunicipios\core;
 
-
 use PDO;
 use PDOException;
 

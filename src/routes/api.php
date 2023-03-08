@@ -1,6 +1,9 @@
 <?php
 
 use Bramus\Router\Router;
+use Pipeg\ApiDepartamentosMunicipios\app\Models\Departamentos;
+
+
 $router = new Router();
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/../config');
@@ -12,9 +15,15 @@ $router->get('/', function() {
     echo 'Hola, mundo!';
 });
 
-$router->get('/saludo/{nombre}', function($nombre) {
-    echo 'Hola, ' . $nombre . '!';
+$router->get('/departamentos', function() {
+
 });
+
+$router->get('/departamentos/{name}', function($name) {
+});
+
+
+
 
 $router->run();
 
