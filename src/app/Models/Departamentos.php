@@ -30,7 +30,7 @@ class Departamentos extends Model{
             ]);
             return $query->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e){
-            return $query;
+            return false;
         }
     }
 
