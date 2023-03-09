@@ -14,7 +14,7 @@ class DepartamentosModel extends Model{
 
     public function get_all(){
         try{
-            $query = $this->prepare("SELECT DISTINCT DEPARTAMENTO as Departamento, REGION as Region FROM data");
+            $query = $this->prepare("SELECT DISTINCT DEPARTAMENTO as Departamento, REGION as Region, CÓDIGO_DANE_DEL_DEPARTAMENTO as Codigo_Dane FROM data");
             $query->execute();
             return $query->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e){
