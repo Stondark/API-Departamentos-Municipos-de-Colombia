@@ -6,7 +6,7 @@ use PDO;
 use PDOException;
 use Pipeg\ApiDepartamentosMunicipios\core\Model;
 
-class Departamentos extends Model{
+class DepartamentosModel extends Model{
 
     public function __construct(){
         parent::__construct();
