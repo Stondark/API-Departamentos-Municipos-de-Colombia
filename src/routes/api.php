@@ -1,6 +1,7 @@
 <?php
 
 use Bramus\Router\Router;
+use Pipeg\ApiDepartamentosMunicipios\app\Controllers\MunicipiosController;
 use Pipeg\ApiDepartamentosMunicipios\app\Controllers\DepartamentosController;
 
 $router = new Router();
@@ -23,6 +24,11 @@ $router->get('/departamentos', function() {
 $router->get('/departamentos/{name}', function($name) {
     $departamentos = new DepartamentosController();
     echo $departamentos->get_by_name($name);
+});
+
+$router->get('/departamentos/municipios/{name}', function($name) {
+    $municipios = new MunicipiosController();
+    echo $municipios->get_by_departament($name);
 });
 
 
