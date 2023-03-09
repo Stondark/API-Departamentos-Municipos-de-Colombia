@@ -24,7 +24,7 @@ class DepartamentosModel extends Model{
 
     public function get_by_name(String $name){
         try{
-            $query = $this->prepare("SELECT DISTINCT DEPARTAMENTO as Departamento, REGION as Region FROM data WHERE Departamento LIKE :Departamento");
+            $query = $this->prepare("SELECT DISTINCT DEPARTAMENTO as Departamento, REGION as Region, CÓDIGO_DANE_DEL_DEPARTAMENTO as Codigo_Dane FROM data WHERE Departamento LIKE :Departamento");
             $query->execute([
                 "Departamento" => '%' . $name . '%'
             ]);
